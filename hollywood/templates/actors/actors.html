@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>What actors?</h1>
+<ul>
+{% for actor in actors %}
+    <li><a href="{% url "view_actor" actor.id %}">{{ actor.name }}</a></li>
+
+    {% endfor %}
+    </ul>
+<br>
+<a href="{% url "new_actor" %}">Add new actor</a>
+</body>
+</html>
